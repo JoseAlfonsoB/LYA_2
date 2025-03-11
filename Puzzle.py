@@ -4,10 +4,10 @@ def buscar_solucion_BFS(estado_inicial, solucion):
     """Inicialización de variables."""
     solucionado = False # Una variable almacenada para indicar si se encontró la solución.
     nodos_visitados = [] # Guarda los nodos que ya han sido visitados.
-    nodos_frontera = [] # Guarda los nodos que están en la cola para ser explorados.
+    nodos_frontera = [] # Guarda los nodos que están en la "cola" para ser explorados.
     
-    nodo_inicial = Nodo(estado_inicial) # Creaa un nodo con el estado inicial.
-    nodos_frontera.append(nodo_inicial) # Añade le nodo inicial a la lista de nodos frontera.
+    nodo_inicial = Nodo(estado_inicial) # Crea un nodo con el estado inicial.
+    nodos_frontera.append(nodo_inicial) # Añade el nodo inicial a la lista de nodos frontera.
 
     """
     Mientras no se haya encontrado la solución y haya nodos en la frontera:
@@ -20,7 +20,7 @@ def buscar_solucion_BFS(estado_inicial, solucion):
     Si no encuentra la solución, retorna "None".
     """
     while not solucionado and len(nodos_frontera) != 0:
-        nodo = nodos_frontera.pop(0)
+        nodo = nodos_frontera.pop(0) # SE MODIFICA PARA CONVERTIRLO DE FIFO A LIFO (se elimina o se quita el cero)
         # Extraer nodo y añadirlo a visitados
         nodos_visitados.append(nodo)
 
