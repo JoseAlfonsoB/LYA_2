@@ -38,7 +38,7 @@ def buscar_solucion_BFS(estado_inicial, solucion):
             hijo_izquierdo = Nodo(hijo)
             hijo_izquierdo.set_padre(nodo)
             if not hijo_izquierdo.en_lista(nodos_visitados) \
-               and not hijo_izquierdo.en_lista(nodos_frontera):
+                and not hijo_izquierdo.en_lista(nodos_frontera):
                 nodos_frontera.append(hijo_izquierdo)
 
             """Intercambia el segundo y el tercer valor de la lista."""
@@ -47,7 +47,7 @@ def buscar_solucion_BFS(estado_inicial, solucion):
             hijo_central = Nodo(hijo)
             hijo_central.set_padre(nodo)
             if not hijo_central.en_lista(nodos_visitados) \
-               and not hijo_central.en_lista(nodos_frontera):
+                and not hijo_central.en_lista(nodos_frontera):
                 nodos_frontera.append(hijo_central)
 
             """Intercambia el tercer y el cuarto valor de la lista."""
@@ -56,7 +56,7 @@ def buscar_solucion_BFS(estado_inicial, solucion):
             hijo_derecho = Nodo(hijo)
             hijo_derecho.set_padre(nodo)
             if not hijo_derecho.en_lista(nodos_visitados) \
-               and not hijo_derecho.en_lista(nodos_frontera):
+                and not hijo_derecho.en_lista(nodos_frontera):
                 nodos_frontera.append(hijo_derecho)
 
     return None  # En caso de no encontrar solución
